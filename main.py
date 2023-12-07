@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 
 
 def world_bank_data(filename):
+    """
+    returns a raw dataframe and cleaned dataframe
+    filename : name of the file which has to converted to a dataframe
+    """
+
     # Read the CSV file into a Pandas DataFrame
     df = pd.read_csv(filename)
     converted_df = df.set_index(['Country Name', 'Indicator Name']).stack().unstack(0).reset_index()
