@@ -29,6 +29,7 @@ selected_data = df[['2010', '2011']].select_dtypes(include='number')
 # Create histograms for each numeric column
 selected_data.hist(figsize=(12, 6), bins=20)
 plt.suptitle('Histograms for Numeric Columns in 2019 and 2020', y=1.02)
+plt.savefig('hist_2010-11.png')
 plt.show()
 
 # Line Chart Code
@@ -50,6 +51,7 @@ plt.xlabel('Year')
 plt.ylabel('Access to electricity (% of population)')
 plt.legend()
 plt.grid(True)
+plt.savefig('co2_line_chart.png')
 plt.show()
 
 # Bar Char Comparison
@@ -60,6 +62,7 @@ aggregated_data.plot(kind='bar', color=['blue', 'orange', 'green', 'red'], figsi
 plt.title('Ease of doing business Comparison Bahrain vs Spain')
 plt.xlabel('Country')
 plt.ylabel('Business rank')
+plt.savefig('Ease_of_business_bar_chart.png')
 plt.show()
 
 
@@ -72,4 +75,5 @@ plt.figure(figsize=(8, 8))
 plt.pie(top5_countries['Total'], labels=top5_countries['Country Name'], autopct='%1.1f%%', startangle=90)
 plt.legend(bbox_to_anchor=(1, 0.5), loc="center left", title="Country Name", bbox_transform=plt.gcf().transFigure)
 plt.title('top 10 Countries with vast Forest Area')
+plt.savefig('forest_area_pie_chart.png')
 plt.show()
