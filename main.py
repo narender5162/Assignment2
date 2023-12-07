@@ -19,11 +19,11 @@ def world_bank_data(filename):
 file_path = 'Countryindicators.csv'
 df, converted_df = world_bank_data(file_path)
 
-'''converted_df.to_csv('converteddata.csv')'''
+converted_df.to_csv('converteddata.csv')
 
 # Cleaning Transposed data
 data = pd.read_csv('converteddata.csv')
-'''data=data.dropna()'''
+data=data.dropna()
 
 # Summary Statistics
 stats1=df.describe()
